@@ -1,25 +1,5 @@
-*{
-
-}
-
-header{
-    background-color: #16bef0;
-}
-
-nav{
-   background-color: #3a2f68;
-   color: aquamarine;
-}
-
-/* Quita las viñetas de lista */
-.lista-horizontal{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Coloca l listado en horizontal y ajusta espacio entre elementos */
-.lista-horizontal li{
-    display: inline;
-    margin-right: 20px;  
+:root{
+    background-color: #fff;
+    --primary-color: #6ec1e4;
+    --secondary-color: #024699;
 }
