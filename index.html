@@ -12,7 +12,49 @@
 <body>
     <!-- Encabezado -->
     <header>
-           <h1>conenido Header</h1>
+           <div class="cont-header-row">
+                <div class="cont-header-logo">
+                    <a href="/"><img class="animacion-logo" src="./static/img/cropped-tresde-01-01.jpg" alt=""></a>
+                </div>
+                <div class="cont-header-buscar">
+                    <div class="cont-header-buscar-busqueda">
+                        <form action="/" method="get">
+                            <label for="entrada-categoria-buscada">Buscar en:</label>
+                                <select name="categoria-producto" id="entrada-categoria-buscada">
+                                    <option value="Buscar en todas las categorias">Todas las categorias</option>
+                                    <option class="level-0" value="cortantes">Cortantes</option>
+                                    <option class="level-1" value="animales">Animales</option>
+                                </select>
+                            <input type="text" placeholder="¿Qué estas buscando?">
+                        </form>
+                    </div>
+                </div>
+                <div class="cont-header-usuario">
+                    <div class="cont-header-usuario-registro">
+                        <a href="">Registrate</a>
+                    </div>
+                    <div class="cont-header-usuario-iniciosesion">
+                        <a href="">Iniciar sesión</a>
+                    </div>
+                </div>
+           </div>
+           <nav>
+                <div class="cont-header-nav-row">
+                    <ul>
+                        <li><a id="texto-link-nav-header" href="">Braile</a></li>
+                        <li><a id="texto-link-nav-header" href="">Cake Toppers</a></li>
+                        <li><a id="texto-link-nav-header" href="">Cortantes</a></li>
+                        <li><a id="texto-link-nav-header" href="">Material Didáctico</a></li>
+                        <li><a id="texto-link-nav-header" href="">Juguetes</a></li>
+                        <li><a id="texto-link-nav-header" href="">Macetas</a></li>
+                        <li><a id="texto-link-nav-header" href="">Mates</a></li>
+                        <li><a id="texto-link-nav-header" href="">Sellos</a></li>
+                        <li><a id="texto-link-nav-header" href="">Soportes</a></li>
+                        <li><a id="texto-link-nav-header" href="">Varios</a></li>
+                    </ul>
+                </div>
+
+           </nav>
     </header>
     <!-- Contenido -->
     <main>
