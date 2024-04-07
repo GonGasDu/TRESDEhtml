@@ -1,5 +1,94 @@
 :root{
     background-color: #fff;
-    --primary-color: #6ec1e4;
-    --secondary-color: #024699;
+    --primary-color: #00c0f2;
+    --secondary-color: #01244e;
 }
+
+
+header{
+    background-color: var(--primary-color);
+}
+
+.header-1{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.header-1.1{
+    padding: 30px;
+}
+.header-row{
+    display: flex;
+    align-items: center;
+}
+.header-row img{
+    margin-right: 10px;
+}
+.header-row input{
+    width: 200px; /* Ancho del cuadro de búsqueda */
+    padding: 10px; /* Espaciado interno del cuadro de búsqueda */
+    border: 1px solid #ccc; /* Borde del cuadro de búsqueda */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de letra del cuadro de búsqueda */
+}
+
+.busqueda-header{
+    margin: 0 100px;
+    
+    
+}
+
+.header-user{
+    margin: 0 200px;
+}
+
+/* Inicio clases de logo y el efecto 3d */
+.contenedorlogo{
+    margin: 0 200px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    perspective: 500px;
+}
+.efectologoimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    animation: rotar 15s linear 0s infinite normal none;
+}
+@keyframes rotar {
+    from{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    }
+    to{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
+}
+.efectologoimg:hover{
+    animation-play-state: paused;;
+    
+}
+/* Fin clases de logo y el efecto 3d */
+
+.contenedor-nav{
+    background-color: var(--secondary-color);
+}
+
+/* NAV */
+nav li{
+    list-style: none;
+    margin: 0px 12px;
+    padding: 15px 0px;
+    display: inline-block;
+    font-size: 15px;  
+}
+
+#asincolor{
+    color: #fff;
+    text-decoration: none;
+}
+   
