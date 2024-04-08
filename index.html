@@ -5,68 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/CSS/style.css">
 
-    <title>Bienvenidos a TRESDE Creaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/0adef2b829.js" crossorigin="anonymous"></script>
+
     <!-- Favicon -->
     <link rel="icon" href="./static/img/favicon.ico">
+
+    <title>Bienvenidos a TRESDE Creaciones</title>
+
 </head>
 <body>
     <!-- Encabezado -->
     <header>
-           <!-- Logo tresde -->
-           <div class="header-1">
-                <div class="header-1.1">
-                    <div class="header-row">
-                        <div class="contenedorlogo">
-                                <a href="/index.html"><img class="efectologoimg" src="./static/img/cropped-tresde-01-01.jpg" alt=""></a>
-                            </div>
-                            <div class="busqueda-header">
-                                <form action="/" method="get">
-                                    <label for="entrada-categoria-buscada">Buscar en:</label>
-                                        <select name="categoria-producto" id="entrada-categoria-buscada">
-                                            <option value="Buscar en todas las categorias">Todas las categorias</option>
-                                            <option class="level-0" value="cortantes">Cortantes</option>
-                                            <option class="level-1" value="animales">Animales</option>
-                                        </select>
-                                    <input type="text" placeholder="¿Qué estas buscando?">
-                                </form>
-                            </div>
-                            <div class="header-user">
-                                <ul>
-                                    <li><a href="">Registrate</a></li>
-                                    <li><a href="">Entra en tu cuenta</a></li>
-                                </ul>
-                                
-                                
-                            </div>
-                    
-                    </div>
-                    
+           <div class="cont-header-row">
+                <div class="cont-header-logo">
+                    <a href="/"><img class="animacion-logo" src="./static/img/cropped-tresde-01-01.jpg" alt=""></a>
                 </div>
-                
+                <div class="cont-header-buscar">
+                    <div class="cont-header-buscar-busqueda">
+                        <form action="/" method="get">
+                            <label for="entrada-categoria-buscada">Buscar en:</label>
+                                <select name="categoria-producto" id="entrada-categoria-buscada">
+                                    <option value="Buscar en todas las categorias">Todas las categorias</option>
+                                    <option class="nivel-0" value="cortantes">Cortantes</option>
+                                    <option class="nivel-1" value="animales">Animales</option>
+                                </select>
+                            <input type="text" placeholder="¿Qué estas buscando?">
+                        </form>
+                    </div>
+                </div>
+                <div class="cont-header-usuario">
+                    <div class="cont-header-usuario-registro">
+                        <a href="">
+                            <i class="fa-solid fa-fingerprint fa-fade"></i>
+                            <span class="texto-registrate">Registrate</span>
+                        </a>
+                    </div>
+                    <div class="cont-header-usuario-iniciosesion">
+                        
+                        <a href="">
+                            <i class="fa-solid fa-right-to-bracket fa-beat"></i>
+                            <span class="texto-inicio-sesion">Inicia sesión </span>
+                        </a>
+                    </div>
+                </div>
            </div>
-                
-           
-          
-           
-
-           <!-- Barra de navegación -->
-           <div class="contenedor-nav">
-                <nav>
+           <nav>
+                <div class="cont-header-nav-row">
                     <ul>
-                        <li><a id="asincolor" href="">Braile</a></li>
-                        <li><a id="asincolor" href="">Cake Toppers</a></li>
-                        <li><a id="asincolor" href="">Cortantes</a></li>
-                        <li><a id="asincolor" href="">Material Didáctico</a></li>
-                        <li><a id="asincolor" href="">Juguetes</a></li>
-                        <li><a id="asincolor" href="">Macetas</a></li>
-                        <li><a id="asincolor" href="">Mates</a></li>
-                        <li><a id="asincolor" href="">Sellos</a></li>
-                        <li><a id="asincolor" href="">Soportes</a></li>
-                        <li><a id="asincolor" href="">Varios</a></li>
+                        <li><a id="texto-link-nav-header" href="">Braile</a></li>
+                        <li><a id="texto-link-nav-header" href="">Cake Toppers</a></li>
+                        <li><a id="texto-link-nav-header" href="">Cortantes</a></li>
+                        <li><a id="texto-link-nav-header" href="">Material Didáctico</a></li>
+                        <li><a id="texto-link-nav-header" href="">Juguetes</a></li>
+                        <li><a id="texto-link-nav-header" href="">Macetas</a></li>
+                        <li><a id="texto-link-nav-header" href="">Mates</a></li>
+                        <li><a id="texto-link-nav-header" href="">Sellos</a></li>
+                        <li><a id="texto-link-nav-header" href="">Soportes</a></li>
+                        <li><a id="texto-link-nav-header" href="">Varios</a></li>
                     </ul>
-               </nav>
-           </div>
-           
+                </div>
+
+           </nav>
     </header>
     <!-- Contenido -->
     <main>

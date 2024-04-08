@@ -1,62 +1,147 @@
 :root{
     background-color: #fff;
-    --primary-color: #00c0f2;
-    --secondary-color: #01244e;
+    --primary-color: #6ec1e4;
+    --secondary-color: #024699;
 }
 
+/* --------------------------------UNIVERSAL---------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------ETIQUETAS-------------------------------- */
 
 header{
-    background-color: var(--primary-color);
-}
-
-.header-1{
-    display: flex;
-    align-items: center;
-    padding: 30px;
-}
-
-.header-1.1{
-    padding: 30px;
-}
-.header-row{
-    display: flex;
-    align-items: center;
-}
-.header-row img{
-    margin-right: 10px;
-}
-.header-row input{
-    width: 200px; /* Ancho del cuadro de búsqueda */
-    padding: 10px; /* Espaciado interno del cuadro de búsqueda */
-    border: 1px solid #ccc; /* Borde del cuadro de búsqueda */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de letra del cuadro de búsqueda */
-}
-
-.busqueda-header{
-    margin: 0 100px;
-    
+    height: 200px;
     
 }
-
-.header-user{
-    margin: 0 200px;
+nav{
+   
 }
 
-/* Inicio clases de logo y el efecto 3d */
-.contenedorlogo{
-    margin: 0 200px;
-    position: relative;
+/* --------------------------------------ID------------------------------------- */
+
+/* Estilo fuente de links de nav en header */
+#texto-link-nav-header{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*------------------------------------ CLASES -----------------------------------*/
+
+/* FUENTES */
+
+
+.merienda {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+  
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.texto-registrate{
+
+    font-family: "merienda";
+}
+
+.texto-inicio-sesion{
+    font-family: "merienda";
+}
+
+/* contenedor padre flex del header */
+.cont-header-row{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    display: flex;
+    flex-wrap: ;
+}
+/* contenedor logo hijo de header */
+.cont-header-logo{
+    margin: 10px;
+    padding: 10px;
     width: 150px;
     height: 150px;
     perspective: 500px;
 }
-.efectologoimg{
-    position: absolute;
+/* contenedor buscar hijo de header */
+.cont-header-buscar{
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    height: 90%;
+    perspective: 500px;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contenedor busqueda hijo de buscar */
+.cont-header-buscar-busqueda{
+    
+}
+
+/* contenedor usuario hijo de header */
+.cont-header-usuario{
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    height: 90%;
+    perspective: 500px;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* boton de registro */
+.cont-header-usuario-registro{
+padding: 10px;
+font-size: 20px;
+}
+/* boton inicio de sesion */
+.cont-header-usuario-iniciosesion{
+padding: 10px;
+font-size: 20px;
+}
+
+/* nav de header */
+.cont-header-nav-row{
+background: var(--secondary-color);
+height: auto;
+display: flex;
+justify-content: center;
+}
+.cont-header-nav-row li{
+    list-style: none;
+    margin: 0px 12px;
+    padding: 15px 0px;
+    display: inline-block;
+    font-size: 15px; 
+}
+
+/* Classe de animacion logo */
+
+.animacion-logo{
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    vertical-align: middle;
     transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
     animation: rotar 15s linear 0s infinite normal none;
 }
@@ -68,27 +153,7 @@ header{
         transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
     }
 }
-.efectologoimg:hover{
+.animacion-logo:hover{
     animation-play-state: paused;;
     
 }
-/* Fin clases de logo y el efecto 3d */
-
-.contenedor-nav{
-    background-color: var(--secondary-color);
-}
-
-/* NAV */
-nav li{
-    list-style: none;
-    margin: 0px 12px;
-    padding: 15px 0px;
-    display: inline-block;
-    font-size: 15px;  
-}
-
-#asincolor{
-    color: #fff;
-    text-decoration: none;
-}
-   
