@@ -15,11 +15,8 @@
 
 header{
     height: 200px;
-    
-}
-nav{
-   
-}
+    }
+
 
 /* --------------------------------------ID------------------------------------- */
 
@@ -29,6 +26,8 @@ nav{
     text-decoration: none;
     font-size: 18px;
 }
+
+
 
 /*------------------------------------ CLASES -----------------------------------*/
 
@@ -40,7 +39,7 @@ nav{
   font-weight: weight;
   font-style: normal;
 }
-  }
+  
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -61,7 +60,7 @@ nav{
     justify-content: center;
     background: var(--primary-color);
     display: flex;
-    flex-wrap: ;
+    flex-wrap: wrap;
 }
 /* contenedor logo hijo de header */
 .cont-header-logo{
@@ -86,7 +85,21 @@ nav{
 
 /* contenedor busqueda hijo de buscar */
 .cont-header-buscar-busqueda{
-    
+   background-color: blueviolet;
+    height: 40px;
+    width: 600px;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seleccion-categoria-buscada{
+    font-size: large;
+}
+
+.texto-entrada-buscar{
+font-size: large;
 }
 
 /* contenedor usuario hijo de header */
