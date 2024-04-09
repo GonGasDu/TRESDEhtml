@@ -32,8 +32,7 @@ nav{
 
 /*------------------------------------ CLASES -----------------------------------*/
 
-/* FUENTES */
-
+/* INICIO FUENTES */
 
 .merienda {
   font-family: "Merienda", cursive;
@@ -49,14 +48,9 @@ nav{
   font-style: normal;
 }
 
-.texto-registrate{
+/* FIN FUENTES */
 
-    font-family: "merienda";
-}
 
-.texto-inicio-sesion{
-    font-family: "merienda";
-}
 
 /* contenedor padre flex del header */
 .cont-header-row{
@@ -108,15 +102,28 @@ nav{
     justify-content: center;
     align-items: center;
 }
+
 /* boton de registro */
 .cont-header-usuario-registro{
 padding: 10px;
 font-size: 20px;
 }
+
 /* boton inicio de sesion */
 .cont-header-usuario-iniciosesion{
 padding: 10px;
 font-size: 20px;
+}
+
+/* texto de registrate */
+
+.texto-registrate{
+    font-family: "merienda";
+}
+
+/* Texto de inicio de sesion */
+.texto-inicio-sesion{
+    font-family: "merienda";
 }
 
 /* nav de header */
