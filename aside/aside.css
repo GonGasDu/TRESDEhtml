@@ -1,0 +1,30 @@
+aside {
+    float: left;
+    width: 200px;
+    background-color:gray;
+    margin-top: 40px;
+    box-sizing: border-box;
+    border: solid 1px var (--blue-color);
+    box-shadow: 2px 2px 5px var(--green-color);}
+    
+    
+    
+    aside h3{
+        font-size: 18px;
+        text-transform: uppercase;
+        color: blue;
+        background-color: var(--secondary-color);
+        text-align: center;
+        padding: 5px;
+        font-family:"NunitoSans-Bold" Arial, Helvetica, sans-serif;
+ 
+    }
+    
+    aside li{
+        color: orange;
+    }
+
+    aside a{
+        color: red;
+    }
+
