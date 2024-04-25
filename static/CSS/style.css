@@ -1,27 +1,23 @@
-:root{
-    background-color: #fff;
-    --primary-color: #00c0f2;
-    --secondary-color: #024699;
+:root {
+  background-color: #fff;
+  --primary-color: #00c0f2;
+  --secondary-color: #024699;
 }
 
 /* --------------------------------UNIVERSAL---------------------------------- */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ----------------------------------ETIQUETAS-------------------------------- */
 
-header{
-    height: 200px;
-    }
-
+header {
+  height: 200px;
+}
 
 /* --------------------------------------ID------------------------------------- */
-
-
-
 
 /*------------------------------------ CLASES -----------------------------------*/
 
@@ -33,7 +29,7 @@ header{
   font-weight: weight;
   font-style: normal;
 }
-  
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -43,11 +39,236 @@ header{
 
 /* FIN FUENTES */
 
-
-
 /* nav de header */
-
 
 /* Classe de animacion logo */
 
+/* elementos del main */
+.contenedor-grid {
+  /* width: 100%; */
+  max-width: 100%;
+  padding: 15px;
+  /* margin: 20px auto; */
+  display: grid;
+  gap: 12px;
+  row-gap: 8px;
 
+  grid-template-columns: repeat(12, 1fr) 27%;
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "title title title title title title title title title title title title listas"
+    "mate mate mate mate maceta maceta maceta maceta maceta maceta maceta maceta listas"
+    "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran listas"
+    "pastel pastel pastel braile braile braile docente docente docente hobbistas hobbistas hobbistas listas";
+}
+
+.contenedor-grid > div,
+.contenedor-grid .title,
+.contenedor-grid .mate,
+.contenedor-grid .maceta,
+.contenedor-grid .pastel,
+.contenedor-grid .braile,
+.contenedor-grid .docente,
+.contenedor-grid .hobbistas,
+.contenedor-grid .instagran,
+.contenedor-grid .listas {
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.contenedor-grid .title {
+  grid-area: title;
+}
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Bienvenida {
+  font-size: 2.5em;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Arial", sans-serif;
+}
+
+.tresde {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.tresde span {
+  color: #555;
+  font-style: italic;
+}
+
+.contenedor-grid .mate {
+  grid-area: mate;
+}
+.contenedor-grid .maceta {
+  grid-area: maceta;
+}
+.contenedor-grid .mate,
+.contenedor-grid .maceta {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.custom-image-1,
+.custom-image-2 {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* estilos de las listas */
+.contenedor-grid .listas {
+  grid-area: listas;
+}
+.categorias-lista {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el título del widget */
+.lista-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la lista de categorías de productos */
+.product-categories {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para cada elemento de categoría */
+.cat-item {
+  margin-bottom: 5px;
+}
+
+/* Estilos para el contador */
+.count {
+  background-color: #ccc;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+/* Estilos para el conteo dentro del contador */
+.ci-count {
+  font-weight: bold;
+  color: #333;
+}
+
+/* estilos del botoon de instagram */
+.contenedor-grid .instagran {
+  grid-area: instagran;
+}
+.contenedor-grid .instagran {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.element-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.button-instagran {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #4285f4;
+  border-radius: 5px;
+}
+
+.link-insta {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.button-instagran:hover {
+  background-color: #3c78dc;
+}
+
+.text-instagran {
+  font-size: 18px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.icon-instagran {
+  color: #fff;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* estilos para las 4 imagenes iguales */
+.contenedor-grid .pastel,
+.contenedor-grid .braile,
+.contenedor-grid .docente,
+.contenedor-grid .hobbistas {
+  /*utilizamos flexbox para alinear el contenido*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.contenedor-grid .pastel {
+  grid-area: pastel;
+}
+.contenedor-grid .braile {
+  grid-area: braile;
+}
+
+.contenedor-grid .docente {
+  grid-area: docente;
+}
+
+.contenedor-grid .hobbistas {
+  grid-area: hobbistas;
+}
+
+.image-colum img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-grid {
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      "title title title title title title title title title title title title title"
+      "mate mate mate mate mate mate maceta maceta maceta maceta maceta maceta maceta"
+      "pastel pastel pastel pastel pastel pastel braile braile braile braile braile braile braile"
+      "docente docente docente docente docente docente hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
+      "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
+      "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contenedor-grid {
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+      "title title title title title title title title title title title title title"
+      "mate mate mate mate mate mate mate mate mate mate mate mate mate"
+      "maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta"
+      "pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel"
+      "braile braile braile braile braile braile braile braile braile braile braile braile braile"
+      "docente docente docente docente docente docente docente docente docente docente docente docente docente"
+      "hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
+      "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
+      "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+  }
+}
