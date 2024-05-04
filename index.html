@@ -7,10 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
 
     <!-- FONTAWESOME -->
     <script
@@ -26,7 +24,57 @@
   <body>
     <!-- Encabezado -->
     <header>
-      <nav></nav>
+      <div class="contenedor-header-grid">
+        <div class="logo">
+          <a href="/."><img class="animacion-logo" src="./static/img/cropped-tresde-01-01.jpg" alt=""></a>
+        </div>
+
+        <div class="buscar">
+          <form action="/" method="get">
+              <label for="entrada-categoria-buscada">Buscar en:</label>
+                  <select name="categoria-producto" class="seleccion-categoria-buscada">
+                      <option value="Buscar en todas las categorias">Todas las categorias</option>
+                      <option value="cortantes">Cortantes</option>
+                      <option value="animales">Animales</option>
+                  </select>
+              <input class="texto-entrada-buscar" type="text" placeholder="¿Qué estas buscando?">
+          </form>
+        </div>
+                 
+        <div class="login">
+          <div class="">
+            <a href="./templates/register.html">
+                <i class="fa-solid fa-fingerprint fa-fade"></i>
+                <span class="texto-registrate">Registrate</span>
+            </a>
+        </div>
+        <br>
+        <div class="">
+            <a href="">
+                <i class="fa-solid fa-right-to-bracket fa-beat"></i>
+                <span class="texto-inicio-sesion">Inicia sesión </span>
+            </a>
+        </div>
+        </div>
+        
+          <nav class="nav">
+            <div class="cont-header-nav-row">
+                <ul>
+                    <li><a id="link-nav" href="./templates/categoria_braile.html">Braile</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_cake_toppers.html">Cake Toppers</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_cortantes.html">Cortantes</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_material_didactico.html">Material Didáctico</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_juguetes.html">Juguetes</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_macetas.html">Macetas</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_mates.html">Mates</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_sellos.html">Sellos</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_soportes.html">Soportes</a></li>
+                    <li><a id="link-nav" href="./templates/categoria_varios.html">Varios</a></li>
+                </ul>
+            </div>
+
+       </nav>
+        
     </header>
 
     <main>

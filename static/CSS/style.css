@@ -14,7 +14,8 @@
 /* ----------------------------------ETIQUETAS-------------------------------- */
 
 header {
-  height: 200px;
+  background-color: #00c0f2;
+  
 }
 
 /* --------------------------------------ID------------------------------------- */
@@ -39,9 +40,91 @@ header {
 
 /* FIN FUENTES */
 
-/* nav de header */
+/* elementos de header */
+#link-nav{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  }
 
-/* Classe de animacion logo */
+.contenedor-header-grid {
+  /* width: 100%; */
+  max-width: 100%;
+  padding: 15px;
+  /* margin: 20px auto; */
+  display: grid;
+  gap: 12px;
+  row-gap: 8px;
+  font-family: ;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  grid-template-areas:
+    "logo logo logo buscar buscar buscar buscar buscar buscar login login login"
+    "nav nav nav nav nav nav nav nav nav nav nav nav";
+}
+.contenedor-header-grid .logo {
+  grid-area: logo;
+}
+.logo {
+  max-width: 50%;
+  max-height: 50%;
+  margin-top: 20px;
+}
+.contenedor-header-grid .buscar {
+  grid-area: buscar;
+}
+.buscar {
+  align-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.contenedor-header-grid .login {
+  grid-area: login;
+}
+.login {
+  align-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.contenedor-header-grid .nav {
+  grid-area: nav;
+}
+.nav{
+  background-color: var(--secondary-color);
+  align-content: center;
+  text-align: center;
+}
+.cont-header-nav-row li{
+  list-style: none;
+  margin: 0px 12px;
+  padding: 15px 0px;
+  display: inline-block;
+  font-size: 15px; 
+}
+/* Animacion logo */
+.animacion-logo{
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  vertical-align: middle;
+  
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+  animation: rotar 15s linear 0s infinite normal none;
+}
+@keyframes rotar {
+  from{
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+  }
+  to{
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+  }
+}
+.animacion-logo:hover{
+  animation-play-state: paused;
+}
 
 /* elementos del main */
 .contenedor-grid {
@@ -243,6 +326,13 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .contenedor-header-grid{
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buscar buscar login login"
+      "nav nav nav nav nav";
+  }
   .contenedor-grid {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto auto auto auto auto auto;
@@ -257,11 +347,19 @@ header {
 }
 
 @media screen and (max-width: 450px) {
+  .contenedor-header-grid{
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "login login login login login login"
+      "buscar buscar buscar buscar buscar "
+      "nav nav nav nav nav";
+  }
+
   .contenedor-grid {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto auto auto auto auto auto auto auto auto;
     grid-template-areas:
-      "title title title title title title title title title title title title title"
       "mate mate mate mate mate mate mate mate mate mate mate mate mate"
       "maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta"
       "pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel"
