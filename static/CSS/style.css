@@ -14,7 +14,7 @@
 /* ----------------------------------ETIQUETAS-------------------------------- */
 
 header {
-  background-color: #00c0f2;
+  background-color: var(--primary-color);
   
 }
 
@@ -53,9 +53,8 @@ header {
   padding: 15px;
   /* margin: 20px auto; */
   display: grid;
-  gap: 12px;
-  row-gap: 8px;
-  font-family: ;
+  gap: 2px;
+  row-gap: 2px;
 
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -66,11 +65,15 @@ header {
 }
 .contenedor-header-grid .logo {
   grid-area: logo;
+  
+
 }
 .logo {
-  max-width: 50%;
-  max-height: 50%;
   margin-top: 20px;
+  align-content: center;
+  justify-content: center;
+  max-height: 60%;
+  max-width: 30%;
 }
 .contenedor-header-grid .buscar {
   grid-area: buscar;
@@ -95,6 +98,8 @@ header {
   background-color: var(--secondary-color);
   align-content: center;
   text-align: center;
+  height: auto;
+  width: auto;
 }
 .cont-header-nav-row li{
   list-style: none;
@@ -107,8 +112,8 @@ header {
 .animacion-logo{
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   vertical-align: middle;
   
   transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
@@ -325,13 +330,156 @@ header {
   display: block;
 }
 
+/* Estilo boton de Whatsapp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* Color de fondo de WhatsApp */
+  color: #fff; /* Color del texto */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  animation: float 3s infinite alternate; /* Animación continua */
+}
+
+/* Animación boton whatsapp */
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* Mueve hacia arriba */
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Estilos para el ícono de WhatsApp (Font Awesome) */
+.whatsapp-btn i {
+  margin-right: 10px;
+}
+
+/* ESTILOS PARA FORMULARIO DE REGISTRO */
+
+.main-registro {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  height: 100vh;
+  background-image: url(../img/Fondos\ 3.png);
+  background-size:contain;
+  box-shadow: inset 0 0 0 2000px rgba(247, 245, 245, 0.7);
+}
+
+.main-inicio {
+  display: flex;
+  justify-content:center;
+  align-items:baseline;
+  height: 100vh;
+  background-image: url(../img/Fondos\ 3.png);
+  background-size:contain;
+  box-shadow: inset 0 0 0 2000px rgba(247, 245, 245, 0.7);
+}
+
+#form-wrapper {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 20px;
+  color: black;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  margin-top: 5px;
+}
+
+input[type="checkbox"] {
+  margin-top: 0;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  margin-top: 5px;
+}
+
+select option {
+  background-color: #444;
+  color: #fff;
+}
+
+.terms-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px; /* Ajusta el espaciado entre el texto y el checkbox según sea necesario */
+}
+
+.terms-checkbox {
+  width: 20px; /* Ajusta el ancho del checkbox según sea necesario */
+  height: 20px; /* Ajusta la altura del checkbox según sea necesario */
+  vertical-align: middle;
+}
+
+.boton-registro-conteiner{
+  text-align: center;
+}
+.boton-registro {
+  background-color: #ff6600;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-registro:hover {
+  background-color: #f7af8b;
+  color: #333;
+}
+
 @media screen and (max-width: 768px) {
   .contenedor-header-grid{
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      "buscar buscar buscar login login"
-      "nav nav nav nav nav";
+      "buscar buscar buscar buscar buscar buscar buscar buscar login login login login"
+      "nav nav nav nav nav nav nav nav nav nav nav nav";
   }
   .contenedor-grid {
     grid-template-columns: repeat(13, 1fr);
@@ -348,12 +496,12 @@ header {
 
 @media screen and (max-width: 450px) {
   .contenedor-header-grid{
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      "login login login login login login"
-      "buscar buscar buscar buscar buscar "
-      "nav nav nav nav nav";
+      "login login login login login login login login login login login login"
+      "buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar"
+      "nav nav nav nav nav nav nav nav nav nav nav";
   }
 
   .contenedor-grid {
@@ -370,3 +518,4 @@ header {
       "listas listas listas listas listas listas listas listas listas listas listas listas listas";
   }
 }
+
