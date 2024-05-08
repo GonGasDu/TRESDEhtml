@@ -41,7 +41,7 @@ header {
 /* FIN FUENTES */
 
 /* elementos de header */
-#link-nav{
+.link-nav{
   color: #fff;
   text-decoration: none;
   font-size: 18px;
