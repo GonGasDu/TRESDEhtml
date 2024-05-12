@@ -494,7 +494,7 @@ select option {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) and (min-width) {
   .contenedor-header-grid{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -502,11 +502,16 @@ select option {
       "login login login login login login login login login login login login"
       "buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar"
       "nav nav nav nav nav nav nav nav nav nav nav";
+    
+      .logo {
+
+        display: none;
+      }
   }
 
   .contenedor-grid {
     grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto;
     grid-template-areas:
       "mate mate mate mate mate mate mate mate mate mate mate mate mate"
       "maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta"
@@ -516,6 +521,9 @@ select option {
       "hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
       "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
       "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+  }
+  .Bienvenida {
+    display: none;
   }
 }
 
