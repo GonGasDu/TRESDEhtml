@@ -393,7 +393,7 @@ header {
 }
 
 h2 {
-  color: #fff;
+  color: var(--primary-color);
   font-size: 30px;
 }
 
@@ -472,6 +472,50 @@ select option {
   background-color: #f7af8b;
   color: #333;
 }
+
+/*  Clases Tarjetas Categorias*/
+
+.tarjeta {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #727272;
+  margin: 15px;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.textocard {
+  padding: 10px;
+}
+
+.tarjeta a {
+  color: rgb(141, 115, 75);
+  font-size: 23px;
+  text-decoration: none;
+  background-color: rgb(245, 165, 165);
+  padding: 5px;
+  margin: px;
+  border-radius: 10px;
+  display: inline-block;
+
+}
+
+.contenedor p {
+  padding: 10px 0px;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 
 @media screen and (max-width: 768px) {
   .contenedor-header-grid{
