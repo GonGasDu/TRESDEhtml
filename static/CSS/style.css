@@ -2,6 +2,7 @@
   background-color: #fff;
   --primary-color: #00c0f2;
   --secondary-color: #024699;
+  
 }
 
 /* --------------------------------UNIVERSAL---------------------------------- */
@@ -18,8 +19,67 @@ header {
   
 }
 
-/* --------------------------------------ID------------------------------------- */
+footer{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 30px ;
+  background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+}
 
+.contenedor-footer-flex {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+}
+
+.archivos {
+  background-color: #25d366;
+  margin: 5px 10px; /* Agrega un espacio entre el botón de ayuda y el formulario */
+}
+
+.main-categorias{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------ID------------------------------------- */
+#botonAyuda {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  padding: 10px 10px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como un bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 10px 10px; /* Margen externo */
+  cursor: pointer; /* Cursor al pasar el mouse */
+  border-radius: 10px; /* Radio de borde */
+}
+
+.contenedor-ayuda {
+  margin: 100px;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.video {
+  flex: 1;
+}
+
+h3 {
+  text-align: center;
+}
 /*------------------------------------ CLASES -----------------------------------*/
 
 /* INICIO FUENTES */
@@ -330,6 +390,7 @@ header {
   display: block;
 }
 
+
 /* Estilo boton de Whatsapp */
 .whatsapp-btn {
   position: fixed;
@@ -481,11 +542,17 @@ select option {
   border-radius: 10px;
   box-shadow: 0 0 10px #727272;
   margin: 15px;
+  overflow: hidden;
 }
 
 .tarjeta img {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
+  
+}
+.tarjeta img:hover{
+ 
+  transform: scale(2);
 }
 
 .textocard {
@@ -508,8 +575,13 @@ select option {
   padding: 10px 0px;
 }
 
-.contenedor {
+.contenedoraso{
   display: flex;
+  flex-direction: row;
+}
+
+.contenedor {
+  display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;

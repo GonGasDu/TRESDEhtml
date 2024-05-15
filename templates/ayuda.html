@@ -78,82 +78,25 @@
     </header>
 
     <main class="main-registro">
-      <section id="form-wrapper">
-        <h2>Completa con tus datos</h2>
-
-        <form action="#" method="get" name="formulario" id="formulario" novalidate>
-          <div class="form-control"></div>
-
-          <!-- Nombre -->
-          <div class="form-control">
-            <label for="">Nombre</label>
-            <input type="text" name="firstname" id="firstname" required>
-          </div>
-          <div class="error" id="error_firstname"></div>
-
-
-          <!-- Apellido -->
-          <div class="form-control">
-            <label for="">Apellido</label>
-            <input type="text" name="lastname" required>
-          </div>
-          <div class="error" id="error-lastname"></div>
-
-          <!-- Telefono -->
-          <div class="form-control">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" name="telefono" id="telefono" required>
-          </div>
-          <div class="error" id="error_telefono"></div>
-
-          <!-- Mail -->
-          <div class="form-control">
-            <label for="mail">Mail</label>
-            <input type="email" name="email" id="email" required placeholder="Para enviarte la factura">
-          </div>
-          <div class="error" id="error_email"></div>
-
-          <!-- Dieccion -->
-          <div class="form-control">
-            <label for="">Dirección</label>
-            <input type="text" name="direccion" id="direccion" placeholder="Direccion de envio">
-          </div>
-          <div class="error" id="error_direccion"></div>
-
-          <!-- Interes -->
-          <div class="form-control">
-            <label for="interes">Interés</label>
-             <select name="interes" id="interes">
-              <option value="" disabled selected>Selecciona tu interés</option>
-              <option value="Pastelería">Pastelería</option>
-              <option value="Cerámica">Cerámica</option>
-              <option value="Docencia">Docencia</option>
-              <option value="Inclusión">Inclusión</option>
-              <option value="Modelismo">Modelismo</option>
-              <option value="Repuestos">Repuestos</option>
-              <option value="Otros">Otros</option>
-            </select>
-          </div>
-          <div class="error" id="error_interes"></div>
-
-          <!-- Terminos y condiciones -->
-          <div class="form-control">
-            <div class="terms">
-              <label for="" class="terms-label">Acepto términos y condiciones.</label>
-              <input type="checkbox" id="terms" class="terms-checkbox" required>
+        <div class="contenedor-ayuda">
+            <div class="video">
+              <h3>¿Que material necesitas?</h3>
+              <iframe width="320" height="180" src="https://www.youtube.com/embed/2Z00E0FWRTs" title="17 Materiales para impresión 3D - En Español" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+              <h3>¿Biodegradable?</h3>
+              <iframe width="320" height="180" src="https://www.youtube.com/embed/jVsB01xLQ5A" title="Filamento PLA, biodegradable y eco-amigable." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+              <h3>¿Que tan resistente?</h3>
+              <iframe width="320" height="180" src="https://www.youtube.com/embed/ycGDR752fT0" title="The BEST 3D printing material? Comparing PLA, PETG &amp; ASA (ABS) - feat. PRUSAMENT by Josef Prusa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+              <h3>¿Necesitas un molde?</h3>
+              <iframe width="320" height="180" src="https://www.youtube.com/embed/WoLtLkUfOh0" title="De la impresión 3d a la reproducción por moldes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
-
-          <!-- Boon de registro -->
-          <div class="boton-registro-conteiner">
-            <button class="boton-registro" type="submit">Registrarse</button>
-          </div>
           
-
-        </form>
-
-      </section>
-
     </main>
       
 
@@ -163,6 +106,5 @@
         <i class="fab fa-whatsapp"></i> ¡Chatea con nosotros por WhatsApp!
     </a>
     </footer>
-    <script src="../js/validaciones.js"></script>
   </body>
 </html>
