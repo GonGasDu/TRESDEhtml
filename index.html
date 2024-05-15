@@ -1,40 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/CSS/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/0adef2b829.js" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="./static/img/favicon.ico">
+    <link rel="icon" href="./static/img/favicon.ico" />
 
     <title>Bienvenidos a TRESDE Creaciones</title>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Encabezado -->
     <header>
-        <nav>      
-        </nav>
+      <div class="contenedor-header-grid">
+        <div class="logo">
+          <a href="/."><img class="animacion-logo" src="./static/img/logo.png" alt=""></a>
+        </div>
+
+        <div class="buscar">
+          <form action="/" method="get">
+              <label for="entrada-categoria-buscada">Buscar en:</label>
+                  <select name="categoria-producto" class="seleccion-categoria-buscada">
+                      <option value="Buscar en todas las categorias">Todas las categorias</option>
+                      <option value="cortantes">Cortantes</option>
+                      <option value="animales">Animales</option>
+                  </select>
+              <input class="texto-entrada-buscar" type="text" placeholder="¿Qué estas buscando?">
+          </form>
+        </div>
+                 
+        <div class="login">
+          <div class="">
+            <a href="./templates/register.html">
+                <i class="fa-solid fa-fingerprint fa-fade"></i>
+                <span class="texto-registrate">Registrate</span>
+            </a>
+          </div>
+
+          <br>
+          
+          <div class="">
+              <a href="./templates/inicio.html">
+                  <i class="fa-solid fa-right-to-bracket fa-beat"></i>
+                  <span class="texto-inicio-sesion">Inicia sesión </span>
+              </a>
+          </div>
+        </div>
+      </div>
+          <nav class="nav">
+            <div class="cont-header-nav-row">
+                <ul>
+                    <li><a class="link-nav" href="./templates/categoria_braile.html">Braile</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_cake_toppers.html">Cake Toppers</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_cortantes.html">Cortantes</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_material_didactico.html">Material Didáctico</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_juguetes.html">Juguetes</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_macetas.html">Macetas</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_mates.html">Mates</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_sellos.html">Sellos</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_soportes.html">Soportes</a></li>
+                    <li><a class="link-nav" href="./templates/categoria_varios.html">Varios</a></li>
+                </ul>
+            </div>
+
+       </nav>
+        
     </header>
 
-    <!-- Contenido -->
     <main>
-               <h1>Contenido de main</h1>
-              
+      <!-- titulo del cuerpo -->
+
+      <div class="contenedor-grid">
+        <div class="title">
+          <h1 class="Bienvenida">
+            Bienvenidos a
+            <span class="tresde"
+              >T<span>r</span><span>e</span><span>s</span>D<span>e</span></span
+            >
+            Creaciones
+          </h1>
+        </div>
+        <div class="mate">
+          <div class="custom-column">
+            <a href="./templates/categoria_mates.html">
+              <img
+                src="./static/img/img-main/mate-768x1024.png"
+                alt="Mates"
+                class="custom-image-1"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="maceta">
+          <div class="custom-column">
+            <a href="./templates/categoria_macetas.html">
+              <img
+                src="./static/img/img-main/macetas-1024x663.jpg"
+                alt="Macetas"
+                class="custom-image-2"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- seccion del boton de instagram -->
+        <div class="instagran">
+          <div class="element-container">
+            <div class="button-instagran">
+              <a
+                class="link-insta"
+                href="https://www.instagram.com/tresde.ar/"
+                target="_blank"
+              >
+                <span>
+                  <span class="icon-instagran">
+                    <i aria-hidden="true" class="fab fa-instagram"></i>
+                  </span>
+                  <span class="text-instagran">SEGUINOS EN INSTAGRAM!</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- seccion # 3 del cuerpo -->
+        <div class="listas">
+          <aside class="categorias-lista">
+            <h3 class="lista-title">¿Qué producto buscás?</h3>
+            <ul class="product-categories">
+              <li class="cat-item">
+                <a href="./templates/categoria_braile.html">Braille</a>
+                <span class="count"><span class="ci-count">(3)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_cake_toppers.html"
+                  >Cake Toppers</a
+                >
+                <span class="count"><span class="ci-count">(85)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_cortantes.html">Cortantes</a>
+                <span class="count"><span class="ci-count">(706)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_juguetes.html">Juguetes</a>
+                <span class="count"><span class="ci-count">(0)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_macetas.html">Macetas</a>
+                <span class="count"><span class="ci-count">(85)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_material_didactico.html"
+                  >Material Didáctico</a
+                >
+                <span class="count"><span class="ci-count">(4)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_mates.html">Mates</a>
+                <span class="count"><span class="ci-count">(13)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_sellos.html"
+                  >Sellos___________</a
+                >
+                <span class="count"><span class="ci-count">(15)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_varios.html">Sin categorizar</a>
+                <span class="count"><span class="ci-count">(0)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_soportes.html">Soportes</a>
+                <span class="count"><span class="ci-count">(0)</span></span>
+              </li>
+              <li class="cat-item">
+                <a href="./templates/categoria_varios.html">Varios</a>
+                <span class="count"><span class="ci-count">(0)</span></span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="pastel">
+          <div class="image-container">
+            <div class="image-colum">
+              <a href="./templates/categoria_cake_toppers.html">
+                <img
+                  src="./static/img/img-main/Banner-Pasteleros-836x1024.jpeg"
+                  alt="Pastel"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="braile">
+          <div class="image-container">
+            <div class="image-colum">
+              <a href="./templates/categoria_braile.html">
+                <img
+                  src="./static/img/img-main/Banner-Braille-836x1024.jpeg"
+                  alt="Braile"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="docente">
+          <div class="image-container">
+            <div class="image-colum">
+              <a href="./templates/categoria_material_didactico.html">
+                <img
+                  src="./static/img/img-main/Baner-Docente-836x1024.jpeg"
+                  alt="Docente"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hobbistas">
+          <div class="image-container">
+            <div class="image-colum">
+              <a href="./templates/categoria_juguetes.html">
+                <img
+                  src="./static/img/img-main/Banner-Hobistas-836x1024.jpeg"
+                  alt="Hobbies"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
 
     <!-- Pie -->
     <footer>
-        
+      <a href="https://api.whatsapp.com/send?phone=005492616424731" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> ¡Hablemos!
+      </a>
+      
+      <div class="contenedor-footer-flex">
+        <div class="ayuda">
+          <a href="./templates/ayuda.html">
+            <button id="botonAyuda">Ayuda y consejos</button>
+          </a>
+        </div>
+    
+        <div class="archivos">
+          <p>Cotizamos tu diseño!!  Sube el archivo y hablemos</p>
+          <form action="#" method="post" enctype="multipart/form-data">
+            <input type="file" name="archivo" id="archivo">
+            <input type="submit" value="Subir Archivo">
+          </form>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

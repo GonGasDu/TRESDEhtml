@@ -1,28 +1,85 @@
-:root{
-    background-color: #fff;
-    --primary-color: #00c0f2;
-    --secondary-color: #024699;
+:root {
+  background-color: #fff;
+  --primary-color: #00c0f2;
+  --secondary-color: #024699;
+  
 }
 
 /* --------------------------------UNIVERSAL---------------------------------- */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ----------------------------------ETIQUETAS-------------------------------- */
 
-header{
-    height: 200px;
-    }
+header {
+  background-color: var(--primary-color);
+  
+}
 
+footer{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 30px ;
+  background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+}
+
+.contenedor-footer-flex {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+}
+
+.archivos {
+  background-color: #25d366;
+  margin: 5px 10px; /* Agrega un espacio entre el botón de ayuda y el formulario */
+}
+
+.main-categorias{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
 /* --------------------------------------ID------------------------------------- */
+#botonAyuda {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  padding: 10px 10px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como un bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 10px 10px; /* Margen externo */
+  cursor: pointer; /* Cursor al pasar el mouse */
+  border-radius: 10px; /* Radio de borde */
+}
 
+.contenedor-ayuda {
+  margin: 100px;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
 
+.video {
+  flex: 1;
+}
 
-
+h3 {
+  text-align: center;
+}
 /*------------------------------------ CLASES -----------------------------------*/
 
 /* INICIO FUENTES */
@@ -33,7 +90,7 @@ header{
   font-weight: weight;
   font-style: normal;
 }
-  
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -43,11 +100,546 @@ header{
 
 /* FIN FUENTES */
 
+/* elementos de header */
+.link-nav{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  }
+
+.contenedor-header-grid {
+  /* width: 100%; */
+  max-width: 100%;
+  padding: 15px;
+  /* margin: 20px auto; */
+  display: grid;
+  gap: 2px;
+  row-gap: 2px;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  grid-template-areas:
+    "logo logo logo buscar buscar buscar buscar buscar buscar login login login"
+    "nav nav nav nav nav nav nav nav nav nav nav nav";
+}
+.contenedor-header-grid .logo {
+  grid-area: logo;
+  
+
+}
+.logo {
+  margin-top: 20px;
+  align-content: center;
+  justify-content: center;
+  max-height: 60%;
+  max-width: 30%;
+}
+.contenedor-header-grid .buscar {
+  grid-area: buscar;
+}
+.buscar {
+  align-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.contenedor-header-grid .login {
+  grid-area: login;
+}
+.login {
+  align-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.contenedor-header-grid .nav {
+  grid-area: nav;
+}
+.nav{
+  background-color: var(--secondary-color);
+  align-content: center;
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+.cont-header-nav-row li{
+  list-style: none;
+  margin: 0px 12px;
+  padding: 15px 0px;
+  display: inline-block;
+  font-size: 15px; 
+}
+/* Animacion logo */
+.animacion-logo{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+  animation: rotar 15s linear 0s infinite normal none;
+}
+@keyframes rotar {
+  from{
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+  }
+  to{
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+  }
+}
+.animacion-logo:hover{
+  animation-play-state: paused;
+}
+
+/* elementos del main */
+.contenedor-grid {
+  /* width: 100%; */
+  max-width: 100%;
+  padding: 15px;
+  /* margin: 20px auto; */
+  display: grid;
+  gap: 12px;
+  row-gap: 8px;
+
+  grid-template-columns: repeat(12, 1fr) 27%;
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "title title title title title title title title title title title title listas"
+    "mate mate mate mate maceta maceta maceta maceta maceta maceta maceta maceta listas"
+    "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran listas"
+    "pastel pastel pastel braile braile braile docente docente docente hobbistas hobbistas hobbistas listas";
+}
+
+.contenedor-grid > div,
+.contenedor-grid .title,
+.contenedor-grid .mate,
+.contenedor-grid .maceta,
+.contenedor-grid .pastel,
+.contenedor-grid .braile,
+.contenedor-grid .docente,
+.contenedor-grid .hobbistas,
+.contenedor-grid .instagran,
+.contenedor-grid .listas {
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.contenedor-grid .title {
+  grid-area: title;
+}
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Bienvenida {
+  font-size: 2.5em;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Arial", sans-serif;
+}
+
+.tresde {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.tresde span {
+  color: #555;
+  font-style: italic;
+}
+
+.contenedor-grid .mate {
+  grid-area: mate;
+}
+.contenedor-grid .maceta {
+  grid-area: maceta;
+}
+.contenedor-grid .mate,
+.contenedor-grid .maceta {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.custom-image-1,
+.custom-image-2 {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* estilos de las listas */
+.contenedor-grid .listas {
+  grid-area: listas;
+}
+.categorias-lista {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el título del widget */
+.lista-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la lista de categorías de productos */
+.product-categories {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para cada elemento de categoría */
+.cat-item {
+  margin-bottom: 5px;
+}
+
+/* Estilos para el contador */
+.count {
+  background-color: #ccc;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+/* Estilos para el conteo dentro del contador */
+.ci-count {
+  font-weight: bold;
+  color: #333;
+}
+
+/* estilos del botoon de instagram */
+.contenedor-grid .instagran {
+  grid-area: instagran;
+}
+.contenedor-grid .instagran {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.element-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.button-instagran {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #4285f4;
+  border-radius: 5px;
+}
+
+.link-insta {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.button-instagran:hover {
+  background-color: #3c78dc;
+}
+
+.text-instagran {
+  font-size: 18px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.icon-instagran {
+  color: #fff;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* estilos para las 4 imagenes iguales */
+.contenedor-grid .pastel,
+.contenedor-grid .braile,
+.contenedor-grid .docente,
+.contenedor-grid .hobbistas {
+  /*utilizamos flexbox para alinear el contenido*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.contenedor-grid .pastel {
+  grid-area: pastel;
+}
+.contenedor-grid .braile {
+  grid-area: braile;
+}
+
+.contenedor-grid .docente {
+  grid-area: docente;
+}
+
+.contenedor-grid .hobbistas {
+  grid-area: hobbistas;
+}
+
+.image-colum img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
-/* nav de header */
+/* Estilo boton de Whatsapp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* Color de fondo de WhatsApp */
+  color: #fff; /* Color del texto */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  animation: float 3s infinite alternate; /* Animación continua */
+}
+
+/* Animación boton whatsapp */
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* Mueve hacia arriba */
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Estilos para el ícono de WhatsApp (Font Awesome) */
+.whatsapp-btn i {
+  margin-right: 10px;
+}
+
+/* ESTILOS PARA FORMULARIO DE REGISTRO */
+
+.main-registro {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  height: 100vh;
+  background-image: url(../img/Fondos\ 3.png);
+  background-size:contain;
+  box-shadow: inset 0 0 0 2000px rgba(247, 245, 245, 0.7);
+}
+
+.main-inicio {
+  display: flex;
+  justify-content:center;
+  align-items:baseline;
+  height: 100vh;
+  background-image: url(../img/Fondos\ 3.png);
+  background-size:contain;
+  box-shadow: inset 0 0 0 2000px rgba(247, 245, 245, 0.7);
+}
+
+#form-wrapper {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 20px;
+  color: black;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  margin-top: 5px;
+}
+
+input[type="checkbox"] {
+  margin-top: 0;
+}
+
+select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  margin-top: 5px;
+}
+
+select option {
+  background-color: #444;
+  color: #fff;
+}
+
+.terms-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px; /* Ajusta el espaciado entre el texto y el checkbox según sea necesario */
+}
+
+.terms-checkbox {
+  width: 20px; /* Ajusta el ancho del checkbox según sea necesario */
+  height: 20px; /* Ajusta la altura del checkbox según sea necesario */
+  vertical-align: middle;
+}
+
+.boton-registro-conteiner{
+  text-align: center;
+}
+.boton-registro {
+  background-color: #ff6600;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-registro:hover {
+  background-color: #f7af8b;
+  color: #333;
+}
+
+/*  Clases Tarjetas Categorias*/
+
+.tarjeta {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #727272;
+  margin: 15px;
+  overflow: hidden;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  
+}
+.tarjeta img:hover{
+ 
+  transform: scale(2);
+}
+
+.textocard {
+  padding: 10px;
+}
+
+.tarjeta a {
+  color: rgb(141, 115, 75);
+  font-size: 23px;
+  text-decoration: none;
+  background-color: rgb(245, 165, 165);
+  padding: 5px;
+  margin: px;
+  border-radius: 10px;
+  display: inline-block;
+
+}
+
+.contenedor p {
+  padding: 10px 0px;
+}
+
+.contenedoraso{
+  display: flex;
+  flex-direction: row;
+}
+
+.contenedor {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
-/* Classe de animacion logo */
 
+@media screen and (max-width: 768px) {
+  .contenedor-header-grid{
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buscar buscar buscar buscar buscar buscar buscar login login login login"
+      "nav nav nav nav nav nav nav nav nav nav nav nav";
+  }
+  .contenedor-grid {
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      "title title title title title title title title title title title title title"
+      "mate mate mate mate mate mate maceta maceta maceta maceta maceta maceta maceta"
+      "pastel pastel pastel pastel pastel pastel braile braile braile braile braile braile braile"
+      "docente docente docente docente docente docente hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
+      "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
+      "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+  }
+}
+
+@media screen and (max-width: 450px) and (min-width) {
+  .contenedor-header-grid{
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "login login login login login login login login login login login login"
+      "buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar"
+      "nav nav nav nav nav nav nav nav nav nav nav";
+    
+      .logo {
+
+        display: none;
+      }
+  }
+
+  .contenedor-grid {
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "mate mate mate mate mate mate mate mate mate mate mate mate mate"
+      "maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta maceta"
+      "pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel pastel"
+      "braile braile braile braile braile braile braile braile braile braile braile braile braile"
+      "docente docente docente docente docente docente docente docente docente docente docente docente docente"
+      "hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
+      "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
+      "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+  }
+  .Bienvenida {
+    display: none;
+  }
+}
 

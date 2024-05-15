@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/CSS/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/0adef2b829.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/favicon.ico" />
+
+    <title>Macetas</title>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="contenedor-header-grid">
+        <div class="logo">
+          <a href="../index.html"><img class="animacion-logo" src="../static/img/logo.png" alt=""></a>
+        </div>
+
+        <div class="buscar">
+          <form action="/" method="get">
+              <label for="entrada-categoria-buscada">Buscar en:</label>
+                  <select name="categoria-producto" class="seleccion-categoria-buscada">
+                      <option value="Buscar en todas las categorias">Todas las categorias</option>
+                      <option value="cortantes">Cortantes</option>
+                      <option value="animales">Animales</option>
+                  </select>
+              <input class="texto-entrada-buscar" type="text" placeholder="¿Qué estas buscando?">
+          </form>
+        </div>
+                 
+        <div class="login">
+          <div class="">
+            <a href="./register.html">
+                <i class="fa-solid fa-fingerprint fa-fade"></i>
+                <span class="texto-registrate">Registrate</span>
+            </a>
+        </div>
+        <br>
+        <div class="">
+            <a href="./inicio.html">
+                <i class="fa-solid fa-right-to-bracket fa-beat"></i>
+                <span class="texto-inicio-sesion">Inicia sesión </span>
+            </a>
+        </div>
+        </div>
+        
+          <nav class="nav">
+            <div class="cont-header-nav-row">
+                <ul>
+                    <li><a class="link-nav" href="../templates/categoria_braile.html">Braile</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_cake_toppers.html">Cake Toppers</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_cortantes.html">Cortantes</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_material_didactico.html">Material Didáctico</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_juguetes.html">Juguetes</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_macetas.html">Macetas</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_mates.html">Mates</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_sellos.html">Sellos</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_soportes.html">Soportes</a></li>
+                    <li><a class="link-nav" href="../templates/categoria_varios.html">Varios</a></li>
+                </ul>
+            </div>
+
+       </nav>
+        
+    </header>
+
+    <main class="main-categorias">
+      <!-- Agrego el botón para mostrar mi personaje favorito -->
+      <button onclick="mostrarCarrito()">Mostrar Carrito</button>
+      <div class="contenedoraso">
+        <div class=" miInicio contenedor">
+
+        </div>
+      </div>
+      
+      
+    </main>
+      
+
+    <!-- Pie -->
+    <footer>
+      <a href="https://api.whatsapp.com/send?phone=005492616424731" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> ¡Chatea con nosotros por WhatsApp!
+    </a>
+    </footer>
+    <script src="../js/datos.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
