@@ -36,6 +36,7 @@
                       <option value="Buscar en todas las categorias">Todas las categorias</option>
                       <option value="cortantes">Cortantes</option>
                       <option value="animales">Animales</option>
+                      <option value="macetas">Macetas</option>
                   </select>
               <input class="texto-entrada-buscar" type="text" placeholder="¿Qué estas buscando?">
           </form>
@@ -120,6 +121,7 @@
           </div>
           <div class="error" id="error_direccion"></div>
 
+          
           <!-- Interes -->
           <div class="form-control">
             <label for="interes">Interés</label>
@@ -136,10 +138,17 @@
           </div>
           <div class="error" id="error_interes"></div>
 
+          <!-- Foto -->
+          <div class="form-control">
+            <label for="">¿Nos compartís tu Foto?</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+          </div>
+          <div class="error" id="error_foto"></div>
+
           <!-- Terminos y condiciones -->
           <div class="form-control">
             <div class="terms">
-              <label for="" class="terms-label">Acepto términos y condiciones.</label>
+              <label for="terms" class="terms-label">Acepto términos y condiciones.</label>
               <input type="checkbox" id="terms" class="terms-checkbox" required>
             </div>
           </div>

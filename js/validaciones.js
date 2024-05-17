@@ -66,6 +66,27 @@
         return true;
     };
 
+     // Función para validar la selección de imagen
+     var validarImagen = function(){
+        var input = document.getElementById('foto');
+        var archivo = input.files[0]; // Obtener el primer archivo seleccionado (en caso de que haya más de uno)
+
+        // Verificar si se seleccionó un archivo
+        if (archivo) {
+            // Verificar el tipo del archivo
+            var tipo = archivo.type.split('/')[0]; // Obtener el tipo de archivo (por ejemplo, 'image' para una imagen)
+
+            // Verificar si el tipo de archivo es una imagen
+            if (tipo !== 'image') {
+                // Si no es una imagen, mostrar un mensaje de error
+                alert("Por favor, selecciona solo imágenes.");
+                input.value = ''; // Limpiar el campo de entrada de archivos
+                return false; // Detener el envío del formulario
+            }
+        }
+        return true; // Permitir el envío del formulario si se selecciona una imagen o no hay ninguna seleccionada
+    };
+
     // Función para validar todos los campos del formulario
     var validar = function(e){
         var hayError = false;
@@ -76,6 +97,7 @@
         hayError |= !validarDireccion();
         hayError |= !validarInteres();
         hayError |= !validarTerminos();
+         hayError |= !validarImagen();
 
         if (hayError) {
             e.preventDefault();
@@ -85,3 +107,4 @@
     // Agregar evento 'submit' al formulario para llamar a la función validar
     formulario.addEventListener("submit", validar);
 }());
+

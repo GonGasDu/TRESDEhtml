@@ -3,6 +3,7 @@
   --primary-color: #00c0f2;
   --secondary-color: #024699;
   
+
 }
 
 /* --------------------------------UNIVERSAL---------------------------------- */
@@ -142,6 +143,7 @@ h3 {
   align-content: center;
   text-align: center;
   margin-top: 20px;
+  font-size:x-large;
 }
 .contenedor-header-grid .login {
   grid-area: login;
@@ -448,9 +450,10 @@ h3 {
 }
 
 #form-wrapper {
-  background-color: #333;
+  background-color: #353434;
   padding: 20px;
   border-radius: 10px;
+  width: 400px;
 }
 
 h2 {
@@ -459,28 +462,26 @@ h2 {
 }
 
 .form-control {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   text-align: left;
   font-size: 20px;
-  color: black;
+  color: rgb(184, 180, 180);
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+
+
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="checkbox"],
-input[type="password"] {
+input[type="password"]{
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #444;
-  color: #fff;
+  background-color: #575555;
+  color: #ffffff;
   margin-top: 5px;
 }
 
@@ -505,7 +506,7 @@ select option {
 
 .terms-label {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: middle;;
   margin-right: 10px; /* Ajusta el espaciado entre el texto y el checkbox según sea necesario */
 }
 
@@ -588,14 +589,15 @@ select option {
 }
 
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1360px) and (max-width:) {
   .contenedor-header-grid{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
       "buscar buscar buscar buscar buscar buscar buscar buscar login login login login"
       "nav nav nav nav nav nav nav nav nav nav nav nav";
+
+      
   }
   .contenedor-grid {
     grid-template-columns: repeat(13, 1fr);
@@ -607,16 +609,51 @@ select option {
       "docente docente docente docente docente docente hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
       "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
       "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+
+      
   }
 }
 
-@media screen and (max-width: 450px) and (min-width) {
+
+
+@media screen and (max-width: 640px) {
   .contenedor-header-grid{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      "login login login login login login login login login login login login"
-      "buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar"
+      "buscar buscar buscar buscar buscar buscar buscar buscar login login login login"
+      "nav nav nav nav nav nav nav nav nav nav nav nav";
+
+      .logo {
+
+        display: none;
+      }
+  }
+  .contenedor-grid {
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      "title title title title title title title title title title title title title"
+      "mate mate mate mate mate mate maceta maceta maceta maceta maceta maceta maceta"
+      "pastel pastel pastel pastel pastel pastel braile braile braile braile braile braile braile"
+      "docente docente docente docente docente docente hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
+      "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
+      "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+
+      .Bienvenida {
+        display: none;
+      }
+  }
+}
+
+
+@media screen and (max-width: 450px){
+  .contenedor-header-grid{
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "login login login login login login login login login login login"
+      "buscar buscar buscar buscar buscar buscar buscar buscar buscar buscar"
       "nav nav nav nav nav nav nav nav nav nav nav";
     
       .logo {
@@ -624,7 +661,9 @@ select option {
         display: none;
       }
   }
+  
 
+  @media screen and (max-width: 450px) {
   .contenedor-grid {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto;
@@ -637,7 +676,13 @@ select option {
       "hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas hobbistas"
       "instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran instagran"
       "listas listas listas listas listas listas listas listas listas listas listas listas listas";
+      
+      .Bienvenida {
+        display: none;
+      }
+    }
   }
+
   .Bienvenida {
     display: none;
   }

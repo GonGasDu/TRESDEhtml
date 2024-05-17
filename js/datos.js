@@ -33,12 +33,12 @@ let data= [
     },
 
     {
-    "name":"Acostado Pensando",
+    "name":"Buda",
     "categoria":"Macetas",
     "subcategoria":"Roberts",
-    "textoTarjeta":"Maceta en cabeza robert acostado pensando",
+    "textoTarjeta":"Maceta en saco de Buda",
     "precio":"1500",
-    "image" : "../static/img/galeria/05 Macetas/Acostado pensando.jpg"
+    "image" : "../static/img/galeria/05 Macetas/Buda Besitos.jpg"
     },
 
     {
